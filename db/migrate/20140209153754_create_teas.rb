@@ -8,6 +8,7 @@ class CreateTeas < ActiveRecord::Migration
     create_table :teas do |t|
       t.string :name
       t.text :description
+      t.string :steep_amount
       t.integer :steep_time
       t.belongs_to :category
       t.timestamps

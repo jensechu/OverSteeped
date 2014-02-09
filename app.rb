@@ -14,7 +14,7 @@ get "/" do
   @categories = Category.take(numCategories)
 
   numTeas = Tea.all.length
-  @teas = Tea.find([1, numTeas])
+  @teas = Tea.take(numTeas)
 
   erb :"teas/index"
 end
