@@ -1,0 +1,16 @@
+<ul>
+  <% @categories.each do |category| %>
+  <li>
+    <%= category.name %>
+    <ul>
+      <% @teas.each do |tea| %>
+      <% if tea.category_id == category.id %>
+      <li>
+        <%= tea.name %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
+</ul>
